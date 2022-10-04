@@ -1,4 +1,12 @@
 .board {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }

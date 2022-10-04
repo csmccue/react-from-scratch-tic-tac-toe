@@ -1,0 +1,8 @@
+.tile {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  border: 2px solid;
+  box-sizing: border-box;
+  background-color: aquamarine;
+}

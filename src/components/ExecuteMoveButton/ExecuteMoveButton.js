@@ -1,5 +1,5 @@
-import React from 'react'
-import Tile from './Tile';
+import React from 'react';
+import Tile from '../Tile/Tile';
 import { useContext } from 'react';
 import { GameContext } from '../../context/GameContext';
 

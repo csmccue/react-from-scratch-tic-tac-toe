@@ -3,13 +3,17 @@ import { createContext, useState } from 'react';
 const GameContext = createContext();
 
 const initialBoard = 
+  ['', '', '', 
+    '', '', '', 
+    '', '', ''];
 
 const GameProvider = ({ children }) => {
   const [board, setBoard] = useState([initialBoard]);
   const [playerX, setPlayerX] = useState();
   const [playerO, setPlayerO] = useState();
   const [tile, setTile] = useState();
-  const [active, setActive] = useState();
+  const [active, setActive] = useState(true);
+  const [currentPlayer, setCurrentPlayer] = useState('X');
 
   const gameState = {
     board,
@@ -21,7 +25,9 @@ const GameProvider = ({ children }) => {
     playerO,
     setPlayerO,
     active, 
-    setActive
+    setActive,
+    currentPlayer,
+    setCurrentPlayer
   };
 
   return <GameContext.Provider value = {{ ...gameState }}>{children}</GameContext.Provider>;
