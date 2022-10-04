@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import { GameContext } from '../context/GameContext';
+import { GameContext } from '../../context/GameContext';
 
 const tileType = {
   circle: 'O',

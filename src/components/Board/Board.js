@@ -1,8 +1,8 @@
 import './Board.css';
 import React from 'react';
-import Tile from './Tile';
+import Tile from '../../components/Tile/Tile';
 import { useContext } from 'react';
-import { GameContext } from '../context/GameContext';
+import { GameContext } from '../../context/GameContext';
 
 export default function Board() {
   const { board, setBoard, tile, setTile } = useContext(GameContext);
