@@ -1,3 +1,4 @@
+import './Board.css';
 import React from 'react';
 import Tile from './Tile';
 import { useContext } from 'react';
