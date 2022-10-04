@@ -15,12 +15,12 @@ export default function Tile() {
   
   function handleTileClick() {
     if (currentPlayer === 'X') {
-      currentPlayer === 'O';
+      setCurrentPlayer('O');
     } else {
-      currentPlayer === 'X';
+      setCurrentPlayer('X');
     }
     console.log('you clicked!');
-    console.log('it is now ' + currentPlayer + 'turn');
+    console.log('it is now ' + currentPlayer + ' turn');
   }
 
   return (
