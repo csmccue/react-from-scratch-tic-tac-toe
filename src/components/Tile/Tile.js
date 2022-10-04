@@ -14,6 +14,7 @@ export default function Tile({ location }) {
   const { board, setBoard, playerX, setPlayerX, playerO, setPlayerO, active, setActive, currentPlayer, setCurrentPlayer } = useContext(GameContext);
   
   function handleTileClick() {
+    board[location].value = currentPlayer;
     if (currentPlayer === 'X') {
       setCurrentPlayer('O');
     } else {
@@ -22,8 +23,6 @@ export default function Tile({ location }) {
     console.log('you clicked!');
     console.log('it is now ' + currentPlayer + ' turn');
   }
-  // console.log(location);
-  console.log(board[location].value);
 
   return (
     <div className= "tile" onClick={handleTileClick}>

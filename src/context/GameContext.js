@@ -10,39 +10,39 @@ const GameContext = createContext();
 const initialBoardObject = [
   {
     place: 1,
-    value: '1'
+    value: ''
   },
   {
     place: 2,
-    value: '2'
+    value: ''
   },
   {
     place: 3,
-    value: '3'
+    value: ''
   },
   {
     place: 4,
-    value: '4'
+    value: ''
   },
   {
     place: 5,
-    value: '5'
+    value: ''
   },
   {
     place: 6,
-    value: '6'
+    value: ''
   },
   {
     place: 7,
-    value: '7'
+    value: ''
   },
   {
     place: 8,
-    value: '8'
+    value: ''
   },
   {
     place: 9,
-    value: '9'
+    value: ''
   }
 ];
 
