@@ -64,7 +64,7 @@ export default function Board() {
     setActive(false);
     alert('O wins!');
   }
-  
+
   function ResetGame() {
     setActive(true);
     setCurrentPlayer('X');
@@ -112,7 +112,7 @@ export default function Board() {
     <main>
       <div className = "message">WELCOME TO ALCHEMY TIC TAC-O</div>
       <div className = "message">It is {currentPlayer}s turn</div>
-      <button onClick={ResetGame}>reset game</button>
+      <button onClick={ResetGame}>Reset game</button>
       <div className = "board">
         <div className="row">
           <Tile key={board[0].place} location={0} />

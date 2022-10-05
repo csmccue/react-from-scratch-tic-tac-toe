@@ -13,3 +13,8 @@
   flex-wrap: wrap;
   flex-direction: row;
 }
+
+.message {
+  font-size: 2em;
+  margin: 10px;
+}
