@@ -1,7 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
 import { GameContext } from '../../context/GameContext';
-// import ExecuteMoveButton from '../ExecuteMoveButton/ExecuteMoveButton';
 import './Tile.css';
 
 const tileType = {

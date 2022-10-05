@@ -3,10 +3,9 @@ import { React, useState } from 'react';
 import Tile from '../../components/Tile/Tile';
 import { useContext } from 'react';
 import { GameContext } from '../../context/GameContext';
-import initialBoard from '../../initial-board-data';
 
 export default function Board() {
-  const { board, setBoard, playerX, setPlayerX, playerO, setPlayerO, active, setActive, currentPlayer, setCurrentPlayer } = useContext(GameContext);
+  const { board, setBoard, active, setActive, currentPlayer, setCurrentPlayer } = useContext(GameContext);
   
   if (board[0].value === 'X' && board[1].value === 'X' && board[2].value === 'X') {
     setActive(false);
@@ -14,9 +13,46 @@ export default function Board() {
   }
 
   function ResetGame() {
-    setBoard(initialBoard);
-    console.log(board);
-    console.log('you pressed reset game');
+    setActive(true);
+    setCurrentPlayer('X');
+    setBoard([
+      {
+        place: 1,
+        value: ''
+      },
+      {
+        place: 2,
+        value: ''
+      },
+      {
+        place: 3,
+        value: ''
+      },
+      {
+        place: 4,
+        value: ''
+      },
+      {
+        place: 5,
+        value: ''
+      },
+      {
+        place: 6,
+        value: ''
+      },
+      {
+        place: 7,
+        value: ''
+      },
+      {
+        place: 8,
+        value: ''
+      },
+      {
+        place: 9,
+        value: ''
+      }
+    ]);
   }
 
   return (
