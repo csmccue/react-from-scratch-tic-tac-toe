@@ -6,11 +6,51 @@ import { GameContext } from '../../context/GameContext';
 
 export default function Board() {
   const { board, setBoard, active, setActive, currentPlayer, setCurrentPlayer } = useContext(GameContext);
-  
+  // conditions for player X to win
   if (board[0].value === 'X' && board[1].value === 'X' && board[2].value === 'X') {
     setActive(false);
-    console.log('X wins!');
+    alert('X wins!');
   }
+  if (board[3].value === 'X' && board[4].value === 'X' && board[5].value === 'X') {
+    setActive(false);
+    alert('X wins!');
+  }
+  if (board[6].value === 'X' && board[7].value === 'X' && board[8].value === 'X') {
+    setActive(false);
+    alert('X wins!');
+  }
+  if (board[0].value === 'X' && board[4].value === 'X' && board[8].value === 'X') {
+    setActive(false);
+    alert('X wins!');
+  }
+  if (board[6].value === 'X' && board[4].value === 'X' && board[2].value === 'X') {
+    setActive(false);
+    alert('X wins!');
+  }
+
+  // conditions for player O to win
+  if (board[0].value === 'O' && board[1].value === 'O' && board[2].value === 'O') {
+    setActive(false);
+    alert('O wins!');
+  }
+  if (board[3].value === 'O' && board[4].value === 'O' && board[5].value === 'O') {
+    setActive(false);
+    alert('O wins!');
+  }
+  if (board[6].value === 'O' && board[7].value === 'O' && board[8].value === 'O') {
+    setActive(false);
+    alert('O wins!');
+  }
+  if (board[0].value === 'O' && board[4].value === 'O' && board[8].value === 'O') {
+    setActive(false);
+    alert('O wins!');
+  }
+  if (board[6].value === 'O' && board[4].value === 'O' && board[2].value === 'O') {
+    setActive(false);
+    alert('O wins!');
+  }
+
+  
 
   function ResetGame() {
     setActive(true);
