@@ -17,8 +17,6 @@ export default function Tile({ location }) {
       } else {
         setCurrentPlayer('X');
       }
-      console.log('you clicked!');
-      console.log('it is now ' + currentPlayer + ' turn');
     }
   }
 

@@ -1,12 +1,27 @@
 import './Board.css';
-import { React, useState } from 'react';
+import { React } from 'react';
 import Tile from '../../components/Tile/Tile';
 import { useContext } from 'react';
 import { GameContext } from '../../context/GameContext';
 
 export default function Board() {
   const { board, setBoard, active, setActive, currentPlayer, setCurrentPlayer } = useContext(GameContext);
-  // conditions for player X to win
+  // check for cats game
+  if (active && 
+    board[0].value && 
+    board[1].value &&
+    board[2].value &&
+    board[3].value &&
+    board[4].value && 
+    board[5].value &&
+    board[6].value &&
+    board[7].value &&
+    board[8].value) {
+    setActive(false);
+    alert('cats game!');
+  }
+  
+    // conditions for player X to win
   if (board[0].value === 'X' && board[1].value === 'X' && board[2].value === 'X') {
     setActive(false);
     alert('X wins!');
