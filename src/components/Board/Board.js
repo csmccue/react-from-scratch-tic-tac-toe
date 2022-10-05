@@ -64,9 +64,7 @@ export default function Board() {
     setActive(false);
     alert('O wins!');
   }
-
   
-
   function ResetGame() {
     setActive(true);
     setCurrentPlayer('X');
