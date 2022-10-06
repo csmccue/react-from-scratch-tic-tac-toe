@@ -6,69 +6,82 @@ import { GameContext } from '../../context/GameContext';
 
 export default function Board() {
   const { board, setBoard, active, setActive, currentPlayer, setCurrentPlayer } = useContext(GameContext);
-  // check for cats game
-  if (active && 
-    board[0].value && 
-    board[1].value &&
-    board[2].value &&
-    board[3].value &&
-    board[4].value && 
-    board[5].value &&
-    board[6].value &&
-    board[7].value &&
-    board[8].value) {
-    setActive(false);
-    alert('cats game!');
-  }
-  
-    // conditions for player X to win
-  if (board[0].value === 'X' && board[1].value === 'X' && board[2].value === 'X') {
-    setActive(false);
-    alert('X wins!');
-  }
-  if (board[3].value === 'X' && board[4].value === 'X' && board[5].value === 'X') {
-    setActive(false);
-    alert('X wins!');
-  }
-  if (board[6].value === 'X' && board[7].value === 'X' && board[8].value === 'X') {
-    setActive(false);
-    alert('X wins!');
-  }
-  if (board[0].value === 'X' && board[4].value === 'X' && board[8].value === 'X') {
-    setActive(false);
-    alert('X wins!');
-  }
-  if (board[6].value === 'X' && board[4].value === 'X' && board[2].value === 'X') {
-    setActive(false);
-    alert('X wins!');
-  }
 
-  // conditions for player O to win
-  if (board[0].value === 'O' && board[1].value === 'O' && board[2].value === 'O') {
-    setActive(false);
-    alert('O wins!');
-  }
-  if (board[3].value === 'O' && board[4].value === 'O' && board[5].value === 'O') {
-    setActive(false);
-    alert('O wins!');
-  }
-  if (board[6].value === 'O' && board[7].value === 'O' && board[8].value === 'O') {
-    setActive(false);
-    alert('O wins!');
-  }
-  if (board[0].value === 'O' && board[4].value === 'O' && board[8].value === 'O') {
-    setActive(false);
-    alert('O wins!');
-  }
-  if (board[6].value === 'O' && board[4].value === 'O' && board[2].value === 'O') {
-    setActive(false);
-    alert('O wins!');
-  }
+  const checkWinner = () => {
+    if (!active)
+      return;
+    // conditions for player X to win
+      // check for cats game
+    if (active && 
+      board[0].value && 
+      board[1].value &&
+      board[2].value &&
+      board[3].value &&
+      board[4].value && 
+      board[5].value &&
+      board[6].value &&
+      board[7].value &&
+      board[8].value) {
+      setActive(false);
+      alert('cats game!');
+    }
+    if (board[0].value === 'X' && board[1].value === 'X' && board[2].value === 'X') {
+      setActive(false);
+      alert('X wins!');
+    }
+    if (board[3].value === 'X' && board[4].value === 'X' && board[5].value === 'X') {
+      setActive(false);
+      alert('X wins!');
+    }
+    if (board[6].value === 'X' && board[7].value === 'X' && board[8].value === 'X') {
+      setActive(false);
+      alert('X wins!');
+    }
+    if (board[0].value === 'X' && board[4].value === 'X' && board[8].value === 'X') {
+      setActive(false);
+      alert('X wins!');
+    }
+    if (board[6].value === 'X' && board[4].value === 'X' && board[2].value === 'X') {
+      setActive(false);
+      alert('X wins!');
+    }
+
+    // add vertical win conditions
+  
+    // conditions for player O to win
+    if (board[0].value === 'O' && board[1].value === 'O' && board[2].value === 'O') {
+      setActive(false);
+      alert('O wins!');
+    }
+    if (board[3].value === 'O' && board[4].value === 'O' && board[5].value === 'O') {
+      setActive(false);
+      alert('O wins!');
+    }
+    if (board[6].value === 'O' && board[7].value === 'O' && board[8].value === 'O') {
+      setActive(false);
+      alert('O wins!');
+    }
+    if (board[0].value === 'O' && board[4].value === 'O' && board[8].value === 'O') {
+      setActive(false);
+      alert('O wins!');
+    }
+    if (board[6].value === 'O' && board[4].value === 'O' && board[2].value === 'O') {
+      setActive(false);
+      alert('O wins!');
+    }
+  };
+
+  checkWinner();
+
 
   function ResetGame() {
     setActive(true);
     setCurrentPlayer('X');
     setBoard([
+      {
+        place: 0,
+        value: ''
+      },
       {
         place: 1,
         value: ''
@@ -99,10 +112,6 @@ export default function Board() {
       },
       {
         place: 8,
-        value: ''
-      },
-      {
-        place: 9,
         value: ''
       }
     ]);
