@@ -1,5 +1,9 @@
 export default [
   {
+    place: 0,
+    value: ''
+  },
+  {
     place: 1,
     value: ''
   },
@@ -29,10 +33,6 @@ export default [
   },
   {
     place: 8,
-    value: ''
-  },
-  {
-    place: 9,
     value: ''
   }
 ];

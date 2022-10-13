@@ -49,7 +49,7 @@ export default function Board() {
       }
     ]);
   }
-
+  console.log(board);
   return (
     <main>
       <div className = "message">WELCOME TO ALCHEMY TIC TAC-O</div>

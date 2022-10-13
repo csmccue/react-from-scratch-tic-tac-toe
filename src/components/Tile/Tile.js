@@ -11,10 +11,9 @@ export default function Tile({ location }) {
     if (!active) {
       return;
     } else {
-
       setBoard((prevState) => {
         return prevState.map((space)=>{
-          if (space.place - 1 === location && space.value === '') {
+          if (space.place === location && space.value === '') {
             if (currentPlayer === 'X') {
               setCurrentPlayer('O');
             } else {
