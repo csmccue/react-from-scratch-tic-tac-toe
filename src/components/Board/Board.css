@@ -1,0 +1,20 @@
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  height: 90vh;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7s9yhHPtcMcWRQFDm9tCBS2RhsUyyOye46A&usqp=CAU);
+  
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.message {
+  font-size: 2em;
+  margin: 10px;
+}
