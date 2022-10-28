@@ -1,10 +1,10 @@
 const WebSocket = require('ws');
-const server = new WebSocket.Server({ post: '8080' })
+const server = new WebSocket.Server({ post: '8080' });
 
 const http = require('http').createServer();
 
 const io = require('socket.io')(http, {
-  cors: { origin: "*"}
+  cors: { origin: "*"};
 });
 
 io.on('connection', (socket) => {
